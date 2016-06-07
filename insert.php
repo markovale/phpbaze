@@ -2,23 +2,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>AUTOMOBILI</title>
+    <title>Imenik s curama</title>
 </head>
 
 <body>
 <h1>
-    AUTOMOBILI
-
+    Imenik s curama
 </h1>
 
 <p>
     <?php
-    $sql = "INSERT INTO automobili (registracija, ime) VALUES ('" . $_POST['registracija'] . "','" . $_POST['ime'] . "')";
+    $sql = "INSERT INTO cure (ime_cure, prezime_cure, broj_mobitela) VALUES ('" . $_POST['ime_cure'] . "', '" . $_POST['prezime_cure'] . "','" . $_POST['broj_mobitela'] . "')";
     $result = $conn->query($sql);
-    echo('Automobil je unesen!<br>');
-    echo('<a href="index.php">Povratak na prikaz automobila</a>');
+    echo('Cura je unesena!<br>');
+    echo('<a href="index.php">Povratak na prikaz cura</a>');
     ?>
-
 </p>
 </body>
 </html>
